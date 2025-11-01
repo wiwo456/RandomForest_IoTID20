@@ -1,3 +1,5 @@
+# This code is about runnign the 36 features that were run in the reseach paper. Here, F1 score, accuracy, precison all is calculated.
+
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
