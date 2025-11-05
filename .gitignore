@@ -1,0 +1,12 @@
+# Ignore dataset files
+*.csv
+*.zip
+*.xlsx
+
+# Ignore Python cache and virtual env folders
+__pycache__/
+*.pyc
+venv/
+venv311/
+.idea/
+.vscode/
