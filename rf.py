@@ -37,7 +37,7 @@ Mean F1-Score : 0.9746
 
 Adaptive random forest complete
 '''
-
+import time 
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -46,7 +46,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 from river import ensemble, tree, metrics
 
-
+start_time = time.time()
 print("Loading IoTID20 dataset...")
 #data = pd.read_csv("IoTID20.csv", nrows=100000)
 data = pd.read_csv("/content/drive/MyDrive/datasets/IoTID20.csv", nrows=100000)
@@ -161,3 +161,5 @@ print(f"Mean Recall   : {np.mean(batch_rec):.4f}")
 print(f"Mean F1-Score : {np.mean(batch_f1):.4f}")
 
 print("Adaptive random forest complete")
+
+print(f"\nTotal runtime: {(time.time() - start_time)/60:.3f} minutes")
