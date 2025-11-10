@@ -55,7 +55,8 @@ from river import ensemble, tree, metrics
 start_time = time.time()
 
 print("Loading IoTID20 dataset...")
-data = pd.read_csv("IoTID20.csv", nrows=100000)
+#data = pd.read_csv("IoTID20.csv", nrows=100000)
+data = pd.read_csv("/content/drive/MyDrive/datasets/IoTID20.csv /content", nrows=100000)
 print("Dataset loaded! Shape:", data.shape)
 
 data = data.drop_duplicates()
