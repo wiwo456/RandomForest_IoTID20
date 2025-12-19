@@ -77,7 +77,7 @@ river_model = ensemble.LeveragingBaggingClassifier(
     seed=42
 )
 
-drift_detector = ADWIN 
+drift_detector = ADWIN(delta=0.05) #adwin 0.05
 
 batch_size = 50
 num_batches = len(X) // batch_size
