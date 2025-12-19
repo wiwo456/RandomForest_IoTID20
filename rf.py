@@ -48,7 +48,7 @@ from river import ensemble, tree, metrics
 
 start_time = time.time()
 print("Loading IoTID20 dataset...")
-data = pd.read_csv("IoTID20.csv", nrows=100000)
+data = pd.read_csv("IoTID20.csv", nrows=1000)
 print("Dataset loaded! Shape:", data.shape)
 
 data = data.drop_duplicates()
@@ -115,7 +115,7 @@ acc_metric = metrics.Accuracy()
 X_dict = X.to_dict(orient='records')
 y_values = y.values
 
-batch_size = 10000
+batch_size = 50
 num_batches = len(X) // batch_size
 
 batch_acc, batch_prec, batch_rec, batch_f1 = [], [], [], []
